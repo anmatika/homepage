@@ -1,6 +1,5 @@
 Homepage::Application.routes.draw do
-  resources :guestbooks
-
+  resources :guestposts
   resources :'home'
   root :to => 'home#index'
 end
