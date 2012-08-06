@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+(function($) {
+
+    $("#main_menu").lavaLamp({  fx: "backout", speed: 700 });
+
+
+}(jQuery));
