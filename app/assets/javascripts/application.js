@@ -16,8 +16,13 @@
 
 (function($) {
 
-    // Sets LavaLamp to navigation menu
-    $(".lavaLamp").lavaLamp({  fx: "backout", speed: 700 });
+    // Waits DOM to be loaded
+    $(document).ready(function() {
 
+        // Sets LavaLamp to navigation menu
+        $(".lavaLamp").lavaLamp({  speed: 350 });
 
+        // Initializes jquery.dataTables plugin to tables
+        $("table").dataTable();
+    });
 }(jQuery));
