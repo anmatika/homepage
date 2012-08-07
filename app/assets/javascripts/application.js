@@ -16,7 +16,8 @@
 
 (function($) {
 
-    $("#main_menu").lavaLamp({  fx: "backout", speed: 700 });
+    // Sets LavaLamp to navigation menu
+    $(".lavaLamp").lavaLamp({  fx: "backout", speed: 700 });
 
 
 }(jQuery));
