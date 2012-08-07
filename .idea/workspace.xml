@@ -4,7 +4,6 @@
     <list default="true" id="79eca68e-99bc-454c-97ca-3a045391b7bb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
     </list>
     <ignored path="homepage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +45,7 @@
       <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="68" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.6825397">
+            <state line="51" column="25" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.65608466">
               <folding />
             </state>
           </provider>
@@ -877,7 +876,11 @@
       <created>1344367259307</created>
       <updated>1344367259307</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2">
+      <created>1344368455698</created>
+      <updated>1344368455698</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1083,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="68" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.6825397">
+        <state line="51" column="25" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.65608466">
           <folding />
         </state>
       </provider>
