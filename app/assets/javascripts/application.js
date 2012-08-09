@@ -23,7 +23,17 @@
         $(".lavaLamp").lavaLamp({  speed: 150 });
 
         // Initializes jquery.dataTables plugin to tables
-        $("table").dataTable();
+        $("table").dataTable( {
+
+            "bJQueryUI": true,
+            "bPaginate": false,
+            "bLengthChange": false,
+            "bFilter": true,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": true
+
+        });
 
         // Attach jquery.button to input type button elements
         $( "input[type=button], input[type=submit], input[type=commit], button").button();
