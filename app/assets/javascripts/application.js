@@ -20,9 +20,12 @@
     $(document).ready(function() {
 
         // Sets LavaLamp to navigation menu
-        $(".lavaLamp").lavaLamp({  speed: 350 });
+        $(".lavaLamp").lavaLamp({  speed: 150 });
 
         // Initializes jquery.dataTables plugin to tables
         $("table").dataTable();
+
+        // Attach jquery.button to input type button elements
+        $( "input[type=button], input[type=submit], input[type=commit], button").button();
     });
 }(jQuery));

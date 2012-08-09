@@ -14,18 +14,21 @@
 /* Represents the background of the highlighted menu-item. */
 .lavaLamp li.back {
     background: url("lava.gif") no-repeat right -30px;
+    background-color: transparent !important;
     width: 9px; height: 30px;
     z-index: 8;
     position: absolute;
 }
 .lavaLamp li.back .left {
     background: url("lava.gif") no-repeat top left;
+    background-color: transparent !important;
     height: 30px;
     margin-right: 9px;
 }
 /* Styles for each menu-item. */
 .lavaLamp li a {
     position: relative; overflow: hidden;
+    background-color: transparent !important;
     text-decoration: none;
     text-transform: uppercase;
     font: bold 14px arial;
