@@ -1,7 +1,8 @@
 /* Styles for the entire LavaLamp menu */
 .lavaLamp {
     position: relative;
-    height: 29px; width: 421px;
+    height: 29px;
+    width: 421px;
     background: url("bg.gif") no-repeat top;
     padding: 15px; margin: 10px 0;
     overflow: hidden;

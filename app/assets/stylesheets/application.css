@@ -56,3 +56,18 @@ div#container {
     -webkit-box-shadow: 5px 5px 5px #888;
     box-shadow: 5px 5px 5px #888;
 }
+
+.error_label{
+   color: red;
+   font-weight: bold;
+
+}
+
+div.field label{
+    vertical-align: top;
+}
+
+.error{
+    border-color: red;
+    border-width: 2px;
+}
