@@ -8,7 +8,7 @@
 (function($)
 {
     $(document).ready(function() {
-        $("form#new_guestpost").validate({
+        $("form#new_guestpost, form.edit_guestpost").validate({
              rules: {
                 "guestpost[message]": "required",
                  "guestpost[email]": {

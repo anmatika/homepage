@@ -15,7 +15,7 @@ gem 'haml-rails'
 gem 'hpricot'
 gem 'ruby_parser'
 gem 'simple-navigation'
-
+gem 'valid_email'
 group :production do
   gem 'pg'
 end
