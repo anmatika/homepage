@@ -1,5 +1,8 @@
-
-- @links.each_pair do |k, v|
-    %ul
+#links
+  %fieldset
+    %legend
+      = "Links"
+    - @links.each_pair do |k, v|
+      %ul
         %li
-            %a(href=k)=v.to_s
+          %a(href=k)=v.to_s
