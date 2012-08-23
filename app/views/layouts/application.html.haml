@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Homepage
+    = stylesheet_link_tag    "application",
+    "lavalamp",
+    :media => "all"
+    = javascript_include_tag "jquery.easing",
+    "jquery.lavalamp.min.js",
+    "jquery.dataTables.js",
+    "jquery-ui",
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js",
+    "jquery.validate",
+    "application",
+    "guestposts"
+    = csrf_meta_tags
+  %body
+    #main
+
+      %header(class="layout")
+        %nav= render_navigation
+      #container= yield

@@ -1,0 +1,19 @@
+= form_for @guestpost do |f|
+  -if @guestpost.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@guestpost.errors.count, "error")} prohibited this guestpost from being saved:"
+      %ul
+        - @guestpost.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :message
+    = f.text_area :message
+  .field
+    = f.label :email
+    = f.text_field :email
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,24 @@
+%h1 Guest book
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Message
+      %th Email
+      %th
+      %th
+      %th
+
+  - @guestposts.each do |guestpost|
+    %tr
+      %td= guestpost.name
+      %td= guestpost.message
+      %td= guestpost.email
+      %td= link_to 'Show', guestpost
+      %td= link_to 'Edit', edit_guestpost_path(guestpost)
+      %td= link_to 'Destroy', guestpost, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to t('new'), new_guestpost_path, :class => "button"

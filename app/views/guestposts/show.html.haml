@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @guestpost.name
+%p
+  %b Message:
+  = @guestpost.message
+%p
+  %b Email:
+  = @guestpost.email
+
+= link_to 'Edit', edit_guestpost_path(@guestpost)
+\|
+= link_to t('back'), guestposts_path
