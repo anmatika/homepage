@@ -17,8 +17,9 @@ gem 'ruby_parser'
 gem 'simple-navigation'
 gem 'valid_email'
 group :production do
-  gem 'pg'
+  #gem 'pg'
+  gem 'sqlite3'
 end
 group :development, :test do
-  gem 'pg'
+  gem 'sqlite3'
 end
