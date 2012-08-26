@@ -48,7 +48,9 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.dom_class = 'lavaLamp'
     primary.item :home, 'Home', home_index_path
     primary.item :links, 'Links', links_path
+    primary.item :photos, 'Photos', photos_path
     primary.item :guestposts, 'Guest book', guestposts_path
+    primary.item :test_bed, 'Test bed', test_bed_index_path
 
 end
 end

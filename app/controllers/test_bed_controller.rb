@@ -1,0 +1,2 @@
+class TestBedController < ApplicationController
+end

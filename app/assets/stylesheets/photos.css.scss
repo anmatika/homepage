@@ -1,0 +1,40 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photo-area {
+  width: 100px;
+  height: 130px;
+  padding: 10px;
+  border: 1px solid #666;
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  background: white;
+}
+#photo {
+  width: 100px;
+  height: 100px;
+  background: url(images/mthood.jpg) center center;
+  margin-bottom: 5px;
+}
+.info-area {
+  opacity: 0.0;
+}
+a.more-info {
+  display: block;
+  width: 89px;
+  height: 26px;
+  background: url(images/moreinfo.jpg);
+  text-indent: -9999px;
+}
+a.close {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: block;
+  width: 20px;
+  height: 21px;
+  background: url(images/close_button.jpg);
+  text-indent: -9999px;
+}
