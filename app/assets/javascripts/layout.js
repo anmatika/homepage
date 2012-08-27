@@ -14,7 +14,7 @@
         $(".lavaLamp").lavaLamp({  speed: 100 });
 
         // Initializes jquery.datatables plugin to tables
-        $("table").dataTable( {
+        $("table.datatables").dataTable( {
 
             "bJQueryUI": true,
             "bPaginate": false,

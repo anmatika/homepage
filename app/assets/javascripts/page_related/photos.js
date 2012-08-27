@@ -1,6 +1,6 @@
 
 
-$(document).ready(function() {
+$(window).load(function() {
     $('.photo_slider').each(function(){
 
         var $this = $(this).addClass('photo-area');
