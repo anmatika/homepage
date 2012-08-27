@@ -1,5 +1,6 @@
-$(document).ready(function(){
 
+
+$(document).ready(function() {
     $('.photo_slider').each(function(){
 
         var $this = $(this).addClass('photo-area');
@@ -79,5 +80,6 @@ $(document).ready(function(){
         });
 
     });
-
 });
+
+

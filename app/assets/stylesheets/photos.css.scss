@@ -1,40 +1,87 @@
-// Place all the styles related to the photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#photos_tab
+{
 
-.photo-area {
-  width: 100px;
-  height: 130px;
+  margin: 20px;
   padding: 10px;
-  border: 1px solid #666;
-  overflow: hidden;
-  position: relative;
-  margin: 10px;
-  background: white;
-}
-#photo {
-  width: 100px;
-  height: 100px;
-  background: url(images/mthood.jpg) center center;
-  margin-bottom: 5px;
-}
-.info-area {
-  opacity: 0.0;
-}
-a.more-info {
-  display: block;
-  width: 89px;
-  height: 26px;
-  background: url(images/moreinfo.jpg);
-  text-indent: -9999px;
-}
-a.close {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  display: block;
-  width: 20px;
-  height: 21px;
-  background: url(images/close_button.jpg);
-  text-indent: -9999px;
+
+  p
+  {
+    font-size: 1.2em; line-height: 1.2em;
+  }
+
+  h1
+  {
+    color: black; font-size: 3.0em;
+  }
+
+  h3
+  {
+    font-size: 2.0em; margin-bottom: 5px;
+  }
+
+  .clear
+  {
+    clear: both;
+  }
+
+  a
+  {
+    outline: none; color: red;
+
+    .close
+    {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      display: block;
+      width: 20px;
+      height: 21px;
+      background: url(images/close_button.jpg);
+      text-indent: -9999px;
+    }
+
+    img { border: none; }
+    :hover { color: black; }
+  }
+
+  .photo_slider_img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+
+  td
+  {
+    vertical-align: top;
+  }
+
+  .photo_slider
+  {
+    position: relative;
+    width: 100px;
+    height: 130px;
+    padding: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: 25px 10px 10px 10px;
+    background: white;
+    float: left;
+  }
+
+  .info_area
+  {
+    display:none;
+  }
+
+  .more_info
+  {
+    display: block;
+    width: 89px;
+    height: 26px;
+    background: url(images/moreinfo.jpg);
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+
 }

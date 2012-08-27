@@ -12,31 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernzr
+
 //= require_tree .
 
-(function($) {
 
-    // Waits DOM to be loaded
-    $(document).ready(function() {
 
-        // Sets LavaLamp to navigation menu
-        $(".lavaLamp").lavaLamp({  speed: 100 });
 
-        // Initializes jquery.dataTables plugin to tables
-        $("table").dataTable( {
-
-            "bJQueryUI": true,
-            "bPaginate": false,
-            "bLengthChange": false,
-            "bFilter": true,
-            "bSort": true,
-            "bInfo": true,
-            "bAutoWidth": true
-
-        });
-
-        // Attach jquery.button to input type button elements
-        $( "input[type='button'], input[type='submit'], button, a").button();
-        //$("input").button();
-    });
-}(jQuery));
