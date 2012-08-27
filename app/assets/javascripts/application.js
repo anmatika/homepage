@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require modernzr
 
-//= require_tree .
+//= require jquery.dataTables.js
+//= require layout
+//= require_directory ./lavalamp
+//= require_directory ./misc
+//= require_directory ./page_related
 
 
 

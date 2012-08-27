@@ -1493,7 +1493,7 @@
 		
 		
 		/**
-		 * Add the options to the page HTML for the table
+		 * Add the options to the page_related HTML for the table
 		 *  @param {object} oSettings datatables settings object
 		 *  @memberof DataTable#oApi
 		 */
@@ -1877,7 +1877,7 @@
 		 *  @param {string} json.sEcho Tracking flag for DataTables to match requests
 		 *  @param {int} json.iTotalRecords Number of records in the data set, not accounting for filtering
 		 *  @param {int} json.iTotalDisplayRecords Number of records in the data set, accounting for filtering
-		 *  @param {array} json.aaData The data to display on this page
+		 *  @param {array} json.aaData The data to display on this page_related
 		 *  @param {string} [json.sColumns] Column ordering (sName, comma separated)
 		 *  @memberof DataTable#oApi
 		 */
@@ -2787,11 +2787,11 @@
 		
 		
 		/**
-		 * Alter the display settings to change the page
+		 * Alter the display settings to change the page_related
 		 *  @param {object} oSettings datatables settings object
 		 *  @param {string|int} mAction Paging action to take: "first", "previous", "next" or "last"
-		 *    or page number to jump to (integer)
-		 *  @returns {bool} true page has changed, false - no change (no effect) eg 'first' on page 1
+		 *    or page_related number to jump to (integer)
+		 *  @returns {bool} true page_related has changed, false - no change (no effect) eg 'first' on page_related 1
 		 *  @memberof DataTable#oApi
 		 */
 		function _fnPageChange ( oSettings, mAction )
@@ -2853,7 +2853,7 @@
 			{
 				_fnLog( oSettings, 0, "Unknown paging action: "+mAction );
 			}
-			$(oSettings.oInstance).trigger('page', oSettings);
+			$(oSettings.oInstance).trigger('page_related', oSettings);
 			
 			return iOldStart != oSettings._iDisplayStart;
 		}
@@ -3982,7 +3982,7 @@
 			else
 			{
 				oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
-				oSettings._iDisplayStart = 0; /* reset display back to page 0 */
+				oSettings._iDisplayStart = 0; /* reset display back to page_related 0 */
 				_fnCalculateEnd( oSettings );
 				_fnDraw( oSettings );
 			}
@@ -4265,7 +4265,7 @@
 		
 		
 		/**
-		 * Save the state of a table in a cookie such that the page can be reloaded
+		 * Save the state of a table in a cookie such that the page_related can be reloaded
 		 *  @param {object} oSettings datatables settings object
 		 *  @memberof DataTable#oApi
 		 */
@@ -4792,7 +4792,7 @@
 		 *  @param {string} [oOpts.order=current] Order of the TR elements in the processed array.
 		 *    Can be either 'current', whereby the current sorting of the table is used, or
 		 *    'original' whereby the original order the data was read into the table is used.
-		 *  @param {string} [oOpts.page=all] Limit the selection to the currently displayed page
+		 *  @param {string} [oOpts.page_related=all] Limit the selection to the currently displayed page_related
 		 *    ("current") or not ("all"). If 'current' is given, then order is assumed to be 
 		 *    'current' and filter is 'applied', regardless of what they might be given as.
 		 *  @returns {object} jQuery object, filtered by the given selector.
@@ -4836,7 +4836,7 @@
 				"page": "all" // current
 			}, oOpts );
 		
-			// Current page implies that order=current and fitler=applied, since it is fairly
+			// Current page_related implies that order=current and fitler=applied, since it is fairly
 			// senseless otherwise
 			if ( oOpts.page == 'current' )
 			{
@@ -4926,7 +4926,7 @@
 		 *  @param {string} [oOpts.order=current] Order of the data in the processed array.
 		 *    Can be either 'current', whereby the current sorting of the table is used, or
 		 *    'original' whereby the original order the data was read into the table is used.
-		 *  @param {string} [oOpts.page=all] Limit the selection to the currently displayed page
+		 *  @param {string} [oOpts.page_related=all] Limit the selection to the currently displayed page_related
 		 *    ("current") or not ("all"). If 'current' is given, then order is assumed to be 
 		 *    'current' and filter is 'applied', regardless of what they might be given as.
 		 *  @returns {array} Data for the matched elements. If any elements, as a result of the
@@ -5656,7 +5656,7 @@
 		
 		/**
 		 * This function will place a new row directly after a row which is currently 
-		 * on display on the page, with the HTML contents that is passed into the 
+		 * on display on the page_related, with the HTML contents that is passed into the
 		 * function. This can be used, for example, to ask for confirmation that a 
 		 * particular record should be deleted.
 		 *  @param {node} nTr The table row to 'open'
@@ -5713,7 +5713,7 @@
 				$(nNewCell).html( mHtml );
 			}
 		
-			/* If the nTr isn't on the page at the moment - then we don't insert at the moment */
+			/* If the nTr isn't on the page_related at the moment - then we don't insert at the moment */
 			var nTrs = $('tr', oSettings.nTBody);
 			if ( $.inArray(nTr, nTrs) != -1  )
 			{
@@ -5734,7 +5734,7 @@
 		 * function. With this function you can have a DataTables table go to the next, 
 		 * previous, first or last pages.
 		 *  @param {string|int} mAction Paging action to take: "first", "previous", "next" or "last"
-		 *    or page number to jump to (integer), note that page 0 is the first page.
+		 *    or page_related number to jump to (integer), note that page_related 0 is the first page_related.
 		 *  @param {bool} [bRedraw=true] Redraw the table or not
 		 *  @dtopt API
 		 *
@@ -6609,7 +6609,7 @@
 			}
 			else
 			{
-				/* Grab the data from the page */
+				/* Grab the data from the page_related */
 				_fnGatherData( oSettings );
 			}
 			
@@ -6740,7 +6740,7 @@
 
 	/**
 	 * Private data store, containing all of the settings objects that are created for the
-	 * tables on a given page.
+	 * tables on a given page_related.
 	 * 
 	 * Note that the <i>DataTable.settings</i> object is aliased to <i>jQuery.fn.dataTableExt</i> 
 	 * through which it may be accessed and manipulated, or <i>jQuery.fn.dataTable.settings</i>.
@@ -7070,7 +7070,7 @@
 		 *     <li>
 		 *       fnInit -  Initialisation of the paging controls. Called only during initialisation 
 		 *         of the table. It is expected that this function will add the required DOM elements 
-		 *         to the page for the paging controls to work. The element pointer 
+		 *         to the page_related for the paging controls to work. The element pointer
 		 *         'oSettings.aanFeatures.p' array is provided by DataTables to contain the paging 
 		 *         controls (note that this is a 2D array to allow for multiple instances of each 
 		 *         DataTables DOM element). It is suggested that you add the controls to this element 
@@ -7081,7 +7081,7 @@
 	     *           <ul>
 		 *             <li>{object} DataTables settings object: see {@link DataTable.models.oSettings}.</li>
 		 *             <li>{node} Container into which the pagination controls must be inserted</li>
-		 *             <li>{function} Draw callback function - whenever the controls cause a page
+		 *             <li>{function} Draw callback function - whenever the controls cause a page_related
 		 *               change, this method must be called to redraw the table.</li>
 	     *           </ul>
 	     *         </li>
@@ -7952,7 +7952,7 @@
 	
 		/**
 		 * Enable or disable the table information display. This shows information 
-		 * about the data that is currently visible on the page, including information
+		 * about the data that is currently visible on the page_related, including information
 		 * about filtered data if that action is being performed.
 		 *  @type boolean
 		 *  @default true
@@ -7987,7 +7987,7 @@
 	
 	
 		/**
-		 * Allows the end user to select the size of a formatted page from a select
+		 * Allows the end user to select the size of a formatted page_related from a select
 		 * menu (sizes are 10, 25, 50 and 100). Requires pagination (bPaginate).
 		 *  @type boolean
 		 *  @default true
@@ -8216,7 +8216,7 @@
 		/**
 		 * Enable or disable state saving. When enabled a cookie will be used to save
 		 * table display information such as pagination information, display length,
-		 * filtering and sorting. As such when the end user reloads the page the
+		 * filtering and sorting. As such when the end user reloads the page_related the
 		 * display display will match what thy had previously set up.
 		 *  @type boolean
 		 *  @default false
@@ -8529,7 +8529,7 @@
 		 *  @param {array} aoData A key/value pair object containing the data to send
 		 *    to the server
 		 *  @param {function} fnCallback to be called on completion of the data get
-		 *    process that will draw the data on the page.
+		 *    process that will draw the data on the page_related.
 		 *  @param {object} oSettings DataTables settings object
 		 *  @dtopt Callbacks
 		 *  @dtopt Server-side
@@ -8790,7 +8790,7 @@
 	
 		/**
 		 * When enabled DataTables will not make a request to the server for the first
-		 * page draw - rather it will use the data already on the page (no sorting etc
+		 * page_related draw - rather it will use the data already on the page_related (no sorting etc
 		 * will be applied to it), thus saving on an XHR at load time. iDeferLoading
 		 * is used to indicate that deferred loading is required, but it is also used
 		 * to tell DataTables how many records there are in the full table (allowing
@@ -8831,7 +8831,7 @@
 	
 	
 		/**
-		 * Number of rows to display on a single page when using pagination. If
+		 * Number of rows to display on a single page_related when using pagination. If
 		 * feature enabled (bLengthChange) then the end user will be able to override
 		 * this to a custom setting using a pop-up menu.
 		 *  @type int
@@ -8851,8 +8851,8 @@
 		/**
 		 * Define the starting point for data display when using DataTables with
 		 * pagination. Note that this parameter is the number of records, rather than
-		 * the page number, so if you have 10 records per page and want to start on
-		 * the third page, it should be "20".
+		 * the page_related number, so if you have 10 records per page_related and want to start on
+		 * the third page_related, it should be "20".
 		 *  @type int
 		 *  @default 0
 		 *  @dtopt Options
@@ -8869,7 +8869,7 @@
 	
 		/**
 		 * The scroll gap is the amount of scrolling that is left to go before
-		 * DataTables will load the next 'page' of data automatically. You typically
+		 * DataTables will load the next 'page_related' of data automatically. You typically
 		 * want a gap which is big enough that the scrolling will be smooth for the
 		 * user, while not so large that it will load more data than need.
 		 *  @type int
@@ -8919,7 +8919,7 @@
 		"oLanguage": {
 			/**
 			 * Strings that are used for WAI-ARIA labels and controls only (these are not
-			 * actually visible on the page, but will be read by screenreaders, and thus
+			 * actually visible on the page_related, but will be read by screenreaders, and thus
 			 * must be internationalised as well).
 			 *  @namespace
 			 */
@@ -8975,7 +8975,7 @@
 			"oPaginate": {
 				/**
 				 * Text to use when using the 'full_numbers' type of pagination for the
-				 * button to take the user to the first page.
+				 * button to take the user to the first page_related.
 				 *  @type string
 				 *  @default First
 				 *  @dtopt Language
@@ -8985,7 +8985,7 @@
 				 *      $('#example').dataTable( {
 				 *        "oLanguage": {
 				 *          "oPaginate": {
-				 *            "sFirst": "First page"
+				 *            "sFirst": "First page_related"
 				 *          }
 				 *        }
 				 *      } );
@@ -8996,7 +8996,7 @@
 			
 				/**
 				 * Text to use when using the 'full_numbers' type of pagination for the
-				 * button to take the user to the last page.
+				 * button to take the user to the last page_related.
 				 *  @type string
 				 *  @default Last
 				 *  @dtopt Language
@@ -9006,7 +9006,7 @@
 				 *      $('#example').dataTable( {
 				 *        "oLanguage": {
 				 *          "oPaginate": {
-				 *            "sLast": "Last page"
+				 *            "sLast": "Last page_related"
 				 *          }
 				 *        }
 				 *      } );
@@ -9017,7 +9017,7 @@
 			
 				/**
 				 * Text to use when using the 'full_numbers' type of pagination for the
-				 * button to take the user to the next page.
+				 * button to take the user to the next page_related.
 				 *  @type string
 				 *  @default Next
 				 *  @dtopt Language
@@ -9027,7 +9027,7 @@
 				 *      $('#example').dataTable( {
 				 *        "oLanguage": {
 				 *          "oPaginate": {
-				 *            "sNext": "Next page"
+				 *            "sNext": "Next page_related"
 				 *          }
 				 *        }
 				 *      } );
@@ -9038,7 +9038,7 @@
 			
 				/**
 				 * Text to use when using the 'full_numbers' type of pagination for the
-				 * button to take the user to the previous page.
+				 * button to take the user to the previous page_related.
 				 *  @type string
 				 *  @default Previous
 				 *  @dtopt Language
@@ -9048,7 +9048,7 @@
 				 *      $('#example').dataTable( {
 				 *        "oLanguage": {
 				 *          "oPaginate": {
-				 *            "sPrevious": "Previous page"
+				 *            "sPrevious": "Previous page_related"
 				 *          }
 				 *        }
 				 *      } );
@@ -9080,7 +9080,7 @@
 		
 			/**
 			 * This string gives information to the end user about the information that 
-			 * is current on display on the page. The _START_, _END_ and _TOTAL_ 
+			 * is current on display on the page_related. The _START_, _END_ and _TOTAL_
 			 * variables are all dynamically replaced as the table display updates, and 
 			 * can be freely moved or removed as the language requirements change.
 			 *  @type string
@@ -9429,7 +9429,7 @@
 	
 		/**
 		 * This initialisation variable allows you to specify exactly where in the
-		 * DOM you want DataTables to inject the various controls it adds to the page
+		 * DOM you want DataTables to inject the various controls it adds to the page_related
 		 * (for example you might want the pagination controls at the top of the
 		 * table). DIV elements (with or without a custom class) can also be added to
 		 * aid styling. The follow syntax is used:
@@ -9481,7 +9481,7 @@
 	
 		/**
 		 * DataTables features two different built-in pagination interaction methods
-		 * ('two_button' or 'full_numbers') which present different page controls to
+		 * ('two_button' or 'full_numbers') which present different page_related controls to
 		 * the end user. Further methods can be added using the API (see below).
 		 *  @type string
 		 *  @default two_button
@@ -10361,7 +10361,7 @@
 	
 			/**
 			 * Delay the creation of TR and TD elements until they are actually
-			 * needed by a driven page draw. This can give a significant speed
+			 * needed by a driven page_related draw. This can give a significant speed
 			 * increase for Ajax source and Javascript source data, but makes no
 			 * difference at all fro DOM and server-side processing tables.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -10390,7 +10390,7 @@
 			"bInfo": null,
 			
 			/**
-			 * Present a user control allowing the end user to change the page size
+			 * Present a user control allowing the end user to change the page_related size
 			 * when pagination is enabled.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -10497,7 +10497,7 @@
 			
 			/**
 			 * Space (in pixels) between the bottom of the scrolling container and 
-			 * the bottom of the scrolling viewport before the next page is loaded
+			 * the bottom of the scrolling viewport before the next page_related is loaded
 			 * when using infinite scrolling.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -11374,7 +11374,7 @@
 			 * Purpose:  Update the two button pagination at the end of the draw
 			 * Returns:  -
 			 * Inputs:   object:oSettings - datatables settings object
-			 *           function:fnCallbackDraw - draw function to call on page change
+			 *           function:fnCallbackDraw - draw function to call on page_related change
 			 */
 			"fnUpdate": function ( oSettings, fnCallbackDraw )
 			{
@@ -11465,10 +11465,10 @@
 			
 			/*
 			 * Function: oPagination.full_numbers.fnUpdate
-			 * Purpose:  Update the list of page buttons shows
+			 * Purpose:  Update the list of page_related buttons shows
 			 * Returns:  -
 			 * Inputs:   object:oSettings - datatables settings object
-			 *           function:fnCallbackDraw - draw function to call on page change
+			 *           function:fnCallbackDraw - draw function to call on page_related change
 			 */
 			"fnUpdate": function ( oSettings, fnCallbackDraw )
 			{
@@ -11488,7 +11488,7 @@
 				var an = oSettings.aanFeatures.p;
 				var fnBind = function (j) {
 					oSettings.oApi._fnBindAction( this, {"page": j+iStartButton-1}, function(e) {
-						/* Use the information in the element to jump to the required page */
+						/* Use the information in the element to jump to the required page_related */
 						oSettings.oApi._fnPageChange( oSettings, e.data.page );
 						fnCallbackDraw( oSettings );
 						e.preventDefault();
@@ -11751,7 +11751,7 @@
 
 	// Information about events fired by DataTables - for documentation.
 	/**
-	 * Draw event, fired whenever the table is redrawn on the page, at the same point as
+	 * Draw event, fired whenever the table is redrawn on the page_related, at the same point as
 	 * fnDrawCallback. This may be useful for binding events or performing calculations when
 	 * the table is altered at all.
 	 *  @name DataTable#draw
@@ -11771,7 +11771,7 @@
 
 	/**
 	 * Page change event, fired when the paging of the table is altered.
-	 *  @name DataTable#page
+	 *  @name DataTable#page_related
 	 *  @event
 	 *  @param {event} e jQuery event object
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}

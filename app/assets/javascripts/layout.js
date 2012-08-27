@@ -27,7 +27,7 @@
         });
 
         // Attach jquery.button to input type button elements
-        $( "input[type='button'], input[type='submit'], button, a").button();
+        // $( "input[type='button'], input[type='submit'], button, a").button();
         //$("input").button();
     });
 }(jQuery));
